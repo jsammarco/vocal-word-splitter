@@ -1,11 +1,22 @@
 import os
+
+if os.name == "nt":
+    ffmpeg_dll_dirs = [
+        r"C:\Users\Copar\miniconda3\Library\bin",
+        r"C:\Users\Copar\anaconda3\Library\bin",
+    ]
+
+    for dll_dir in ffmpeg_dll_dirs:
+        if os.path.isdir(dll_dir):
+            os.add_dll_directory(dll_dir)
+
 import json
 import re
 import subprocess
 import whisperx
 import torch
 
-AUDIO_FILE = "vocals.wav"
+AUDIO_FILE = "vocals.mp3"
 OUTPUT_DIR = "word_clips"
 JSON_FILE = "words.json"
 
