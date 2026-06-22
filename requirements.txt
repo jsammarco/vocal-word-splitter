@@ -1,0 +1,9 @@
+whisperx
+torch
+torchaudio
+numpy
+soundfile
+ffmpeg-python
+tqdm
+python-dotenv
+pydantic
